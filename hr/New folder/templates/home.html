@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Predict Insurance Bill</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Employee  Attrition</h1>
+
+     <!-- Form to enter new data for predictions  -->
+    <form action="{{ url_for('predict')}}"method="POST">
+        <input type="text" name="monthlyincome" placeholder="monthlyincome" style="width:200px; height:10px; required="required" /><br>
+    	<input type="text" name="monthlyrate" placeholder="monthlyrate" style="width:200px; height:10pxrequired="required" /><br>
+        <input type="text" name="dailyrate" placeholder="dailyrate" style="width:200px; height:10pxrequired="required" /><br>
+        <input type="text" name="totalworkingyears" placeholder="totalworkingyears" style="width:200px; height:10pxrequired="required" /><br>
+        <input type="text" name="yearsatcompany" placeholder="yearsatcompany" style="width:200px; height:10pxrequired="required" /><br>
+        <input type="text" name="yearsincurrentrole" placeholder="yearsincurrentrole" rstyle="width:200px; height:10pxequired="required" /><br>
+		<input type="text" name="yearswithcurrmanager" placeholder="yearswithcurrmanager" style="width:200px; height:10pxrequired="required" /><br>
+		<input type="text" name="ageyears" placeholder="ageyears" style="width:200px; height:10pxrequired="required" /><br>
+		<input type="text" name="overtime" placeholder="0:no 1:yes" style="width:200px; height:10pxrequired="required" /><br>
+        <input type="text" name="distancefromhome" placeholder="distancefromhome" style="width:200px; height:10pxrequired="required" /><br>
+		<input type="text" name="stockoptionlevel" placeholder="0-3" style="width:200px; height:10pxrequired="required" /><br>
+		<input type="text" name="joblevel" placeholder="1-5" style="width:200px; height:10pxrequired="required" /><br>
+		<input type="text" name="maritalstatus" placeholder="'Divorced': 0, 'Married': 1, 'Single': 2" required="required" /><br>
+		<input type="text" name="jobrole" placeholder="'Healthcare Representative': 0, 'Human Resources': 1, 'Laboratory Technician': 2, 'Manager': 3, 'Manufacturing Director': 4, 'Research Director': 5, 'Research Scientist': 6, 'Sales Executive': 7, 'Sales Representative': 8" style="width:200px; height:10pxrequired="required" /><br>
+		<input type="text" name="yearssincelastpromotion" placeholder="yearssincelastpromotion" style="width:200px; height:10pxrequired="required" /><br>
+		
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{pred}}
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<html>
+
+<div class="wrapper">
+    <div class="container">
+    <center > 
+	 <h1>Predict Employee  Attrition</h1>
+     
+     <!-- Form to enter new data for predictions  -->
+    <form action="{{ url_for('predict')}}"method="POST">
+        <input type="text" name="monthlyincome" placeholder="monthly income" style="width:200px; height:10px required="required" /><br><br>
+    	<input type="text" name="monthlyrate" placeholder="monthly rate" style="width:200px; height:10pxrequired="required" /><br><br>
+        <input type="text" name="dailyrate" placeholder="daily rate" style="width:200px; height:10pxrequired="required" /><br><br>
+        <input type="text" name="totalworkingyears" placeholder="total working years" style="width:200px; height:10pxrequired="required" /><br><br>
+        <input type="text" name="yearsatcompany" placeholder="years at company" style="width:200px; height:10pxrequired="required" /><br> <br>
+        <input type="text" name="yearsincurrentrole" placeholder="years in current role" style="width:200px; height:30px;required="required" /><br> <br>
+		<input type="text" name="yearswithcurrmanager" placeholder="years with curr manager" style="width:200px; height:10pxrequired="required" /><br> <br>
+		<input type="text" name="ageyears" placeholder="age in years" style="width:200px; height:10pxrequired="required" /><br> <br>
+		<!---<input type="text" name="overtime" placeholder="0:no 1:yes" style="width:200px; height:10pxrequired="required" /><br> <br>--->
+		<label for="overtime">Choose  overtime:   </label>
+		<select id="maritalstatus" name="overtime"> <br>
+		<option value=0>No</option>
+		<option value=1>Yes</option>
+		
+		
+		</select>
+		<br><br>
+		
+        <input type="text" name="distancefromhome" placeholder="distance from home" style="width:200px; height:10pxrequired="required" /><br> <br>
+		<input type="text" name="stockoptionlevel" placeholder=" stock pointing:0-3" style="width:200px; height:10pxrequired="required" /><br> <br>
+		<input type="text" name="joblevel" placeholder="joblevel:1-5" style="width:200px; height:10pxrequired="required" /><br> <br>
+		<!---<input type="text" name="maritalstatus" placeholder="'Divorced': 0, 'Married': 1, 'Single': 2" required="required" /><br>
+		<!--<input type="text" name="jobrole" placeholder="'Healthcare Representative': 0, 'Human Resources': 1, 'Laboratory Technician': 2, 'Manager': 3, 'Manufacturing Director': 4, 'Research Director': 5, 'Research Scientist': 6, 'Sales Executive': 7, 'Sales Representative': 8" style="width:1300px; height:10pxrequired="required" /><br>-->
+		
+		<label for="maritalstatus">Choose  maritalstatus:   </label>
+		<select id="maritalstatus" name="marital status">
+		<option value=0>Divorced</option>
+		<option value=1>Married</option>
+		<option value=2>Single</option>
+		
+		</select>
+		<br>
+		
+		<br>
+		<label for="jobrole">Choose a JobRole:   </label>
+		<select id="jobrole" name="jobrole">
+		<option value=0>Healthcare Representative</option>
+		<option value=1>Human Resources</option>
+		<option value=2>Laboratory Technician</option>
+		<option value=3>Manager</option>
+		<option value=4>Manufacturing Director</option>
+		<option value=5>Research Director</option>
+		<option value=6>Research Scientist</option>
+		
+		<option value=8>Sales Representative</option>
+		</select>
+		
+		
+		
+		<br>
+		<br>
+		<input type="text" name="yearssincelastpromotion" placeholder="years since last promotion" style="width:200px; height:10pxrequired="required" /><br> <br> <br>
+		<br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+		</center>
+    </form>
+    </div>
+</div>
+<center>
+ </div>
+ <h1>{{pred}}</h1>
+</center>
+</body>
+</html>
