@@ -8,7 +8,7 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.model_selection import train_test_split
 
 df = pd.read_csv (
-    "D:\\machine_learning_projects\\nuclei_tech_projects\\Attrition\\Data\\WA_Fn-UseC_-HR-Employee-Attrition.csv")
+    r"C:\Users\KIRAN\Desktop\Learning\Dashboard\MLAlgos\HR-Employee-Attrition.xlsx")
 
 # drop the unnecessary columns
 df.drop (['EmployeeNumber','Over18','StandardHours','EmployeeCount'],axis=1,inplace=True)
